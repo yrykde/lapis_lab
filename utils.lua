@@ -4,6 +4,7 @@ function table_represent(table, deph)
     end
     if table == nil then
         io.write("NIL valie")
+        return
     end
     for key, value in pairs(table) do
         if type(value) == "table" then
