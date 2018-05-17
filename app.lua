@@ -3,9 +3,17 @@ local app = lapis.Application()
 
 
 app:before_filter(function(self)
-    print("session tables")
+    print("<<<session tables>>>")
     for  key, value in pairs(self.session) do
-        print(key .. value)
+        print("----" .. key .. value .. "----")
+    end
+    print("<<<req tables>>>")
+    for  key, value in pairs(self.req) do
+        print("----" .. key .. value .. "----")
+    end
+    print("<<<cookies tables>>>")
+    for  key, value in pairs(self.cookies) do
+        print("----" .. key .. value .. "----")
     end
 end)
 
