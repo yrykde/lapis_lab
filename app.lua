@@ -4,16 +4,16 @@ local app = lapis.Application()
 
 app:before_filter(function(self)
     print("<<<session tables>>>")
-    for  key, value in pairs(self.session) do
-        print("----" .. key .. value .. "----")
+    for  k, v in pairs(self.session) do
+        print("----" .. k .. v .. "----")
     end
     print("<<<req tables>>>")
-    for  key, value in pairs(self.req) do
-        print("----" .. key .. value .. "----")
+    for  k, v in pairs(self.req) do
+        print("----" .. k .. v .. "----")
     end
     print("<<<cookies tables>>>")
-    for  key, value in pairs(self.cookies) do
-        print("----" .. key .. value .. "----")
+    for  k, v in pairs(self.cookies) do
+        print("----" .. k .. v .. "----")
     end
 end)
 
