@@ -1,20 +1,14 @@
 local lapis = require("lapis")
+local utils = requare("utils")
 local app = lapis.Application()
-
 
 app:before_filter(function(self)
     print("<<<session tables>>>")
-    for  k, v in pairs(self.session) do
-        print("----" .. k .. v .. "----")
-    end
+    print(utils.table_print(self.session))
     print("<<<req tables>>>")
-    for  k, v in pairs(self.req) do
-        print("----" .. k .. v .. "----")
-    end
+    print(utils.table_print(self.req))
     print("<<<cookies tables>>>")
-    for  k, v in pairs(self.cookies) do
-        print("----" .. k .. v .. "----")
-    end
+    print(utils.table_print(self.cookies))
 end)
 
 app:get("/", function()
