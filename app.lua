@@ -1,5 +1,5 @@
 local lapis = require("lapis")
-local utils = requare("utils")
+local utils = require("utils")
 local app = lapis.Application()
 
 app:before_filter(function(self)
