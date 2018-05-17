@@ -2,6 +2,9 @@ function table_represent(table, deph)
     if deph == nil then
         deph = 1
     end
+    if table == nil then
+        io.write("NIL valie")
+    end
     for key, value in pairs(table) do
         if type(value) == "table" then
             io.write(string.format(string.rep("\t", deph).."[%s] => table\n", tostring(key)))
