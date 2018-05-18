@@ -13,6 +13,8 @@ function lapisutils.table_represent(table, deph)
             if type(value) == "table" then
                 io.write(string.format(string.rep("\t", d).."[%s] => table\n", tostring(key)))
                 table_represent_inside(t[key], d+1)
+            elseif type(value) == nil then
+                io.write(string.format(string.rep("\t", d).."[%s] => nil\n", tostring(key)))
             else
                 io.write(string.format(string.rep("\t", d).."[%s] => [%s]\n", tostring(key), tostring(value)))
             end
