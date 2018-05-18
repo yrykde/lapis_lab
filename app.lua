@@ -1,5 +1,4 @@
 local lapis = require("lapis")
-local utils = require("utils")
 local app = lapis.Application()
 local mutils = require("lapisutils")
 
