@@ -1,5 +1,4 @@
 local lapis = require("lapis")
-local json_params = require("lapis.application").json_params
 local app = lapis.Application()
 local mutils = require("lapisutils")
 local ngx = require("ngx")
