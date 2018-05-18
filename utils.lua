@@ -1,4 +1,6 @@
-function table_represent(table, deph)
+local lapisutils = {}
+
+function lapisutils.table_represent(table, deph)
     if deph == nil then
         deph = 1
     end
@@ -15,3 +17,5 @@ function table_represent(table, deph)
         end
     end
 end
+
+return lapisutils
