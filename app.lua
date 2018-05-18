@@ -1,7 +1,7 @@
 local lapis = require("lapis")
 local utils = require("utils")
 local app = lapis.Application()
-local mutils = requare("lapisutils")
+local mutils = require("lapisutils")
 
 app:before_filter(function(self)
     print("<<<session tables>>>")
