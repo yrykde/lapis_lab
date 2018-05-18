@@ -6,7 +6,7 @@ function lapisutils.table_represent(table, deph)
             d = 1
         end
         if t == nil then
-            io.write("NIL valie")
+            io.write(string.rep("\t", d).."NIL value\n")
             return
         end
         for key, value in pairs(t) do
